@@ -1,7 +1,7 @@
 module.exports = {
     getPlanes: (req, res, next) => {
         req.app.get('db')
-            .get_planes()
+            .get_planes([ 25 ])
             .then(planes => {
                 res.send(planes)
             })
@@ -12,6 +12,6 @@ module.exports = {
             })
     },
 
-    
+
 
 }
